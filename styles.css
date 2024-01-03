@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    height: 100%;
+}
+
+/* Create a pseudo-element for the background */
+html::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('img/tile-image.png'); /* Replace with your image path */
+    background-repeat: repeat;
+    //opacity: 0.5; /* Set the opacity to 50% */
+    z-index: -1;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* Ensure the form appears above the background */
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #555;
+    padding-bottom: 5px;
+}
+
+/* Flexbox layout for label and input */
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    flex: 1; /* Allocate 1 part of the space to the label */
+    margin-right: 10px; /* Space between label and input */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="url"],
+input[type="file"] {
+    flex: 3; /* Allocate 3 parts of the space to the input field */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: calc(100% - 40px);
+    padding: 15px;
+    border: none;
+    background-color: #5C6BC0;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 20px auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #3F51B5;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="url"],
+    input[type="file"],
+    button {
+        width: calc(80% - 40px); /* Adjust to 80% on larger screens */
+    }
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
